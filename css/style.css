@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@400;600;700&display=swap");
+
+:root {
+  --background: #e5eaef;
+  --primary: #4387d8;
+  --secondary: #315e93;
+  --tertiary: #fbfcfe;
+  --white: #ffffff;
+  --title: #102032;
+  --text: #93a3b0;
+  --container: 1216px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header img {
+  width: 40px;
+}
+
+body {
+  background: var(--background);
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  max-width: var(--container);
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+header ul li:not(:first-child) {
+  margin-left: 24px;
+}
+
+nav ul a {
+  text-decoration: none;
+  display: block;
+}
+
+#links {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--title);
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+#links a:hover {
+  filter: opacity(0.8);
+}
+
+#redes-sociais img {
+  display: block;
+}
+
+#inicio {
+  max-width: var(--container);
+  margin: 0 auto;
+
+  height: calc(100vh - (40px) + 29px); /*Altura do header menos altura da tela*/
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+#inicio h1 {
+  font-size: 80px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#inicio h1 span {
+  color: var(--primary);
+  display: block;
+}
+
+#inicio img {
+  display: block;
+  object-fit: contain;
+  width: 493px;
+
+  -webkit-mask-image: linear-gradient(to left, var(--background), transparent);
+  mask-image: linear-gradient(to left, var(--background), transparent);
+
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  border-radius: 50px;
+  border: 10px solid var(--white);
+}
+
+#formacao {
+  background-color: var(--tertiary);
+}
+
+#conteudo-formacao {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+#conteudo-formacao h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-left: 95px;
+}
+
+#conteudo-formacao .formacao-item {
+  display: flex;
+  font-family: "Lato", sans-serif;
+}
+
+#conteudo-formacao #lista-formacao {
+  flex-direction: column;
+  margin-top: 37px;
+}
+
+.formacao-item:not(:first-child) {
+  margin-top: 45px;
+}
+
+.formacao-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  margin-left: 24px;
+}
+
+.formacao-item h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.formacao-item .onde {
+  font-size: 16px;
+  color: var(--title);
+}
+
+.formacao-item .quando {
+  font-size: 14px;
+  color: var(--text);
+}
+
+#habilidades {
+  background-color: var(--primary);
+}
+
+#conteudo-habilidades {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 154px 0;
+
+  display: flex;
+  align-items: center;
+}
+
+#conteudo-habilidades h2 {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 48px;
+}
+
+#conteudo-habilidades h2 span {
+  font-size: 24px;
+  display: block;
+}
+
+#conteudo-habilidades img {
+  width: 50px;
+}
+
+#tecnologias {
+  width: 100%;
+  margin-left: 49px;
+
+  display: flex;
+}
+
+#tecnologias li {
+  background-color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 159px;
+  height: 159px;
+  border-radius: 8px;
+
+  box-shadow: 0px 36px 28px -24px rgba(0, 0, 0, 0.2);
+}
+
+#tecnologias li:not(:last-child) {
+  margin-right: 24px;
+}
+
+#tecnologias li p {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: var(--primary);
+  margin-top: 8px;
+}
+
+.conteudo-cursos {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 80px 0;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.conteudo-cursos h2 {
+  color: var(--title);
+  font-size: 48px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.conteudo-cursos h2 span {
+  font-size: 24px;
+}
+
+.conteudo-cursos li:not(:first-child) {
+  margin-top: 24px;
+}
+
+.conteudo-cursos li:nth-child(2) {
+  margin-top: 40px;
+}
+
+.conteudo-cursos li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 24px 26px;
+  gap: 20px;
+
+  box-shadow: 0 28px 36px -16px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo-cursos img {
+  width: 100px;
+}
+
+.conteudo-cursos li h3 {
+  font-size: 24px;
+  color: var(--title);
+}
+
+.conteudo-cursos li p {
+  font-family: Lato;
+  font-size: 22px;
+  color: var(--text);
+
+  margin-top: 16px;
+}
+
+footer {
+  height: 100vh;
+  background-color: var(--primary);
+}
+
+.conteudo-footer {
+  max-width: var(--container);
+  margin: 0 auto;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#titulo-footer {
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#titulo-footer h2 {
+  font-size: 48px;
+}
+
+#titulo-footer p {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+form {
+  margin-top: 40px;
+  max-width: 592px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  font-family: Lato;
+
+  height: 67px;
+  border-radius: 4px;
+  border: 0;
+}
+
+form textarea {
+  font-family: Lato;
+
+  border-radius: 4px;
+  border: 0;
+  resize: none;
+}
+
+form input::placeholder,
+textarea::placeholder {
+  color: var(--text);
+}
+
+form input,
+textarea {
+  color: var(--title);
+}
+
+form input:not([type="submit"]) {
+  padding: 0 24px;
+}
+
+form input + input {
+  margin-top: 16px;
+}
+
+form input[type="submit"] {
+  margin-top: 24px;
+  background-color: var(--secondary);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+
+  transition: 0.2s;
+}
+
+form input[type="submit"]:hover {
+  filter: brightness(0.8);
+}
+
+form textarea {
+  margin-top: 16px;
+  padding: 24px;
+}
