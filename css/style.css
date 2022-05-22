@@ -294,7 +294,6 @@ footer {
 .conteudo-footer {
   max-width: var(--container);
   margin: 0 auto;
-  height: 100%;
 
   display: flex;
   flex-direction: column;
